@@ -19,8 +19,8 @@ export default new Router({
       [
         { path: '/main', component: () => import('@/views/nav1/table'), name: '主页', hidden: true },
         { path: '/table', component: () => import('@/views/nav1/table'), name: 'Table' },
-        { path: '/form', component: () => import('@/views/nav1/table'), name: 'Form' },
-        { path: '/1', component: () => import('@/views/nav1/table'), name: '1' },
+//      { path: '/form', component: () => import('@/views/nav1/table'), name: 'Form' },
+//      { path: '/1', component: () => import('@/views/nav1/table'), name: '1' },
       ]
     },
     {
@@ -37,11 +37,11 @@ export default new Router({
     {
         path: '/',
         component: () => import('@/views/Home'),
-        name: '',
+        name: 'charts',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
+        leaf: false,//只有一个节点true
         children: [
-            { path: '/page6', component: () => import('@/views/nav1/table'), name: '组件三' }
+            { path: '/charts', component: () => import('@/views/nav3/charts'), name: 'charts' }
         ]
     },
   ]
